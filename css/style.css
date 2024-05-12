@@ -6829,6 +6829,12 @@ button.bg-dark:focus {
   border-radius: 0 !important;
 }
 
+.clearfix{
+  background-color: #fff;
+  height: min-content;
+  align-items: center;
+}
+
 .clearfix::after {
   display: block;
   clear: both;
@@ -13274,9 +13280,15 @@ label.error {
 }
 .site-filters li {
   display: inline-block;
+  justify-content: space-around;
   padding: 0;
   margin-bottom: 3px;
 }
+
+.site-filters li.btn {
+  width: 126px;
+}
+
 .site-filters li.btn {
   box-shadow: none;
   -webkit-box-shadow: none;
@@ -16272,15 +16284,19 @@ label.error {
   }
 }
 
+.service-row {
+  gap: 15px;
+}
+
 .service-row .col {
   max-width: 20%;
   flex: 0 0 20%;
   background: #fff;
 }
-.service-row .col:nth-child(2n) {
+.service-row .col {
   background: #faf8f2;
 }
-.service-row .col:nth-child(2n) .info {
+.service-row .col .info {
   background: #faf8f2;
 }
 @media only screen and (max-width: 1199px) {
@@ -16313,12 +16329,16 @@ label.error {
   }
 }
 
-.service-box .info {
-  background: #fff;
-  padding: 25px 30px;
+.col, .service-box .info {
+  border-radius: 0 0 0 15px;
   -webkit-transition: all 0.5s;
   -ms-transition: all 0.5s;
   transition: all 0.5s;
+}
+
+.service-box .info {
+  background: #fff;
+  padding: 25px 30px;
 }
 @media only screen and (max-width: 1400px) {
   .service-box .info {
@@ -16346,8 +16366,10 @@ label.error {
   }
 }
 
-.service-box:hover .info {
+.service-box:hover .info, .col:hover {
   background: #a6611c !important;
+  border-radius:0 0 5px 5px;
+  box-shadow: 0 0 20px #000;
 }
 .service-box:hover .info .title,
 .service-box:hover .info p {
@@ -20523,8 +20545,8 @@ ol.comment-list li .children li {
   margin-bottom: 0;
   margin-left: 0;
   margin-right: 0;
-  width: 150px;
-  height: 80px;
+  width: auto;
+  height: 80;
   position: relative;
   z-index: 9;
 }
@@ -20664,6 +20686,7 @@ ol.comment-list li .children li {
 
 .header-nav {
   padding: 0;
+  margin-bottom: 0px;
 }
 @media only screen and (max-width: 991px) {
   .header-nav {
