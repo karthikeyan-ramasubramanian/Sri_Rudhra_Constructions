@@ -12677,7 +12677,32 @@ label.error {
   -webkit-border-radius: 100%;
   margin-right: 5px;
 }
-.bootstrap-select .dropdown-menu ul li a:hover {
+.bootstrap-select .dropdown-menu ul li a:hover {ubuntu@nanib-pc:~/Sri_Rudhra_Constructions$ git pull origin master
+  fatal: couldn't find remote ref master
+  ubuntu@nanib-pc:~/Sri_Rudhra_Constructions$ git pull origin main
+  From https://github.com/Nithinbharathi93/Sri_Rudhra_Constructions
+   * branch            main       -> FETCH_HEAD
+  Already up to date.
+  ubuntu@nanib-pc:~/Sri_Rudhra_Constructions$ git commit -m 'okey'
+  On branch main
+  Your branch is up to date with 'origin/main'.
+  
+  Changes not staged for commit:
+    (use "git add/rm <file>..." to update what will be committed)
+    (use "git restore <file>..." to discard changes in working directory)
+          deleted:    coming-soon.html
+          deleted:    company-exhibition.html
+  
+  no changes added to commit (use "git add" and/or "git commit -a")
+  ubuntu@nanib-pc:~/Sri_Rudhra_Constructions$ 
+   *  History restored 
+  
+  ubuntu@nanib-pc:~/Sri_Rudhra_Constructions$ 
+   *  History restored 
+  
+  ubuntu@nanib-pc:~/Sri_Rudhra_Constructions$ 
+   *  History restored 
+  
   background-color: #f2f2f4;
 }
 
@@ -20565,8 +20590,8 @@ ol.comment-list li .children li {
   vertical-align: middle;
 }
 .logo-header img {
-  height: auto;
-  width: 100%;
+  height: 80px;
+  width: auto;
 }
 .logo-header span {
   font-size: 20px;
