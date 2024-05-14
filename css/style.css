@@ -12677,32 +12677,7 @@ label.error {
   -webkit-border-radius: 100%;
   margin-right: 5px;
 }
-.bootstrap-select .dropdown-menu ul li a:hover {ubuntu@nanib-pc:~/Sri_Rudhra_Constructions$ git pull origin master
-  fatal: couldn't find remote ref master
-  ubuntu@nanib-pc:~/Sri_Rudhra_Constructions$ git pull origin main
-  From https://github.com/Nithinbharathi93/Sri_Rudhra_Constructions
-   * branch            main       -> FETCH_HEAD
-  Already up to date.
-  ubuntu@nanib-pc:~/Sri_Rudhra_Constructions$ git commit -m 'okey'
-  On branch main
-  Your branch is up to date with 'origin/main'.
-  
-  Changes not staged for commit:
-    (use "git add/rm <file>..." to update what will be committed)
-    (use "git restore <file>..." to discard changes in working directory)
-          deleted:    coming-soon.html
-          deleted:    company-exhibition.html
-  
-  no changes added to commit (use "git add" and/or "git commit -a")
-  ubuntu@nanib-pc:~/Sri_Rudhra_Constructions$ 
-   *  History restored 
-  
-  ubuntu@nanib-pc:~/Sri_Rudhra_Constructions$ 
-   *  History restored 
-  
-  ubuntu@nanib-pc:~/Sri_Rudhra_Constructions$ 
-   *  History restored 
-  
+.bootstrap-select .dropdown-menu ul li a:hover {
   background-color: #f2f2f4;
 }
 
@@ -13311,7 +13286,8 @@ label.error {
 }
 
 .site-filters li.btn {
-  width: 126px;
+  font-size: small;
+  width: 150px;
 }
 
 .site-filters li.btn {
