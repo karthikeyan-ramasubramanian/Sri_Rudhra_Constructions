@@ -1,7 +1,7 @@
 /**
 Core script to handle the entire theme and core functions
 **/
-var KingArchitect = function(){
+var THM = function(){
 	/* Search Bar ============ */
 	siteUrl = '';
 	
@@ -536,7 +536,7 @@ var KingArchitect = function(){
 /* Document.ready Start */	
 jQuery(document).ready(function() {
     'use strict';
-	KingArchitect.init();
+	THM.init();
 	
 	$('a[data-toggle="tab"]').click(function(){
 		// todo remove snippet on bootstrap v4
@@ -567,7 +567,7 @@ jQuery(document).ready(function() {
 /* Window Load START */
 jQuery(window).on('load',function () {
 	'use strict'; 
-	KingArchitect.load();
+	THM.load();
 	setTimeout(function(){
 		jQuery('#loading-area').remove();
 	}, 0);
@@ -576,6 +576,6 @@ jQuery(window).on('load',function () {
 /* Window Resize START */
 jQuery(window).on('resize',function () {
 	'use strict'; 
-	KingArchitect.resize();
+	THM.resize();
 });
 /*  Window Resize END */
