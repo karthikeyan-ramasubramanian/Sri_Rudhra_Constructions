@@ -21263,6 +21263,14 @@ footer .widget-link a {
   color: #fff;
 }
 
+footer .widget ul li a {
+  color:#fff;
+}
+
+footer .widget ul li a:hover {
+  color:#a6611c;
+}
+
 .contact-info-bx li {
   padding-bottom: 10px;
   position: relative;
