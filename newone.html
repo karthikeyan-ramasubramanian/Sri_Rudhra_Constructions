@@ -5,55 +5,117 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        html {
- display: flex;
-  justify-content: center;
-  align-items: center;
-  align-contents: center;
-  height: 100%;
-}
+        body {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          align-contents: center;
+          height: 100%;
+          width: 100%;
+        }
 
-/* Styles for the tilt block */
-#tilt1 {
-  display: block;
-  height: 200px;
-  width: 300px;
-  background-color: grey;
-  margin: 0 auto;
-  transition: box-shadow 0.1s, transform 0.1s;
-  
-  /*
-    * Adding image to the background
-    * No relation to the hover effect.
-    */
-  background-image: url(http://unsplash.it/300/200);
-  background-size: 100%;
-  background-repeat: no-repeat;
-}
+        #allImgs {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          align-items: center;
+        }
 
-#tilt1:hover {
-  box-shadow: 0px 0px 30px rgba(0,0,0, 0.6);
-  cursor: pointer;
-}
+        #allImgs div {
+          padding: 20px;
+        }
+
+        /* Styles for the tilt block */
+        #tilt1, #tilt2, #tilt3, #tilt4, #tilt5, #tilt6 {
+          display: block;
+          height: 200px;
+          width: 300px;
+          padding: 20px;
+          background-color: grey;
+          margin: 0 auto;
+          transition: box-shadow 0.1s, transform 0.1s;
+          background-size: 100%;
+          background-repeat: no-repeat;
+        }
+        #tilt1:hover, #tilt2:hover, #tilt3:hover, #tilt4:hover, #tilt5:hover, #tilt6:hover {
+          box-shadow: 0px 0px 30px rgba(0,0,0, 0.6);
+          cursor: pointer;
+        }
 
     </style>
 </head>
 <body>
-    <div id="tilt1"></div>
+  <div id="allImgs">
+    <div id="tilt1" style="background-image: url('./images/portfolio/portfolio-box1/pic1.jpeg');"></div>
+    <div id="tilt2" style="background-image: url('./images/portfolio/portfolio-box1/pic2.jpeg');"></div>
+    <div id="tilt3" style="background-image: url('./images/portfolio/portfolio-box1/pic3.jpeg');"></div>
+    <div id="tilt4" style="background-image: url('./images/portfolio/portfolio-box1/pic4.jpeg');"></div>
+    <div id="tilt5" style="background-image: url('./images/portfolio/portfolio-box1/pic5.jpeg');"></div>
+    <div id="tilt6" style="background-image: url('./images/portfolio/portfolio-box1/pic6.jpeg');"></div>
+  </div>
+    
     <script>
         /* Store the element in el */
-let el = document.getElementById('tilt1')
+        let el1 = document.getElementById('tilt1')
+        let el2 = document.getElementById('tilt2')
+        let el3 = document.getElementById('tilt3')
+        let el4 = document.getElementById('tilt4')
+        let el5 = document.getElementById('tilt5')
+        let el6 = document.getElementById('tilt6')
 
 /* Get the height and width of the element */
-const height = el.clientHeight
-const width = el.clientWidth
+const height = el1.clientHeight
+const width = el1.clientWidth
 
-/*
-  * Add a listener for mousemove event
-  * Which will trigger function 'handleMove'
-  * On mousemove
-  */
-el.addEventListener('mousemove', handleMove)
+  el1.addEventListener('mousemove', (e) => {
+      var xVal = e.layerX
+      var yVal = e.layerY
+      var yRotation = 20 * ((xVal - width / 2) / width)
+      var xRotation = -20 * ((yVal - height / 2) / height)
+      var string = 'perspective(500px) scale(1.1) rotateX(' + xRotation + 'deg) rotateY(' + yRotation + 'deg)'
+      el1.style.transform = string
+  })
+  el2.addEventListener('mousemove', (e) => {
+      var xVal = e.layerX
+      var yVal = e.layerY
+      var yRotation = 20 * ((xVal - width / 2) / width)
+      var xRotation = -20 * ((yVal - height / 2) / height)
+      var string = 'perspective(500px) scale(1.1) rotateX(' + xRotation + 'deg) rotateY(' + yRotation + 'deg)'
+      el2.style.transform = string
+  })
+  el3.addEventListener('mousemove', (e) => {
+      var xVal = e.layerX
+      var yVal = e.layerY
+      var yRotation = 20 * ((xVal - width / 2) / width)
+      var xRotation = -20 * ((yVal - height / 2) / height)
+      var string = 'perspective(500px) scale(1.1) rotateX(' + xRotation + 'deg) rotateY(' + yRotation + 'deg)'
+      el3.style.transform = string
+  })
+  el4.addEventListener('mousemove', (e) => {
+      var xVal = e.layerX
+      var yVal = e.layerY
+      var yRotation = 20 * ((xVal - width / 2) / width)
+      var xRotation = -20 * ((yVal - height / 2) / height)
+      var string = 'perspective(500px) scale(1.1) rotateX(' + xRotation + 'deg) rotateY(' + yRotation + 'deg)'
+      el4.style.transform = string
+  })
+  el5.addEventListener('mousemove', (e) => {
+      var xVal = e.layerX
+      var yVal = e.layerY
+      var yRotation = 20 * ((xVal - width / 2) / width)
+      var xRotation = -20 * ((yVal - height / 2) / height)
+      var string = 'perspective(500px) scale(1.1) rotateX(' + xRotation + 'deg) rotateY(' + yRotation + 'deg)'
+      el5.style.transform = string
+  })
+  el6.addEventListener('mousemove', (e) => {
+      var xVal = e.layerX
+      var yVal = e.layerY
+      var yRotation = 20 * ((xVal - width / 2) / width)
+      var xRotation = -20 * ((yVal - height / 2) / height)
+      var string = 'perspective(500px) scale(1.1) rotateX(' + xRotation + 'deg) rotateY(' + yRotation + 'deg)'
+      el6.style.transform = string
+  })
+
 
 /* Define function a */
 function handleMove(e) {
@@ -63,9 +125,9 @@ function handleMove(e) {
     * On mouseover
     */
   /* Store the x position */
-  const xVal = e.layerX
+  var xVal = e.layerX
   /* Store the y position */
-  const yVal = e.layerY
+  var yVal = e.layerY
   
   /*
     * Calculate rotation valuee along the Y-axis
@@ -73,31 +135,103 @@ function handleMove(e) {
     * Control the rotation
     * You can change the value and see the results
     */
-  const yRotation = 20 * ((xVal - width / 2) / width)
+  var yRotation = 20 * ((xVal - width / 2) / width)
   
   /* Calculate the rotation along the X-axis */
-  const xRotation = -20 * ((yVal - height / 2) / height)
+  var xRotation = -20 * ((yVal - height / 2) / height)
   
   /* Generate string for CSS transform property */
-  const string = 'perspective(500px) scale(1.1) rotateX(' + xRotation + 'deg) rotateY(' + yRotation + 'deg)'
+  var string = 'perspective(500px) scale(1.1) rotateX(' + xRotation + 'deg) rotateY(' + yRotation + 'deg)'
   
   /* Apply the calculated transformation */
   el.style.transform = string
 }
 
 /* Add listener for mouseout event, remove the rotation */
-el.addEventListener('mouseout', function() {
-  el.style.transform = 'perspective(500px) scale(1) rotateX(0) rotateY(0)'
+el1.addEventListener('mouseout', function() {
+  el1.style.transform = 'perspective(500px) scale(1) rotateX(0) rotateY(0)'
 })
 
 /* Add listener for mousedown event, to simulate click */
-el.addEventListener('mousedown', function() {
-  el.style.transform = 'perspective(500px) scale(0.9) rotateX(0) rotateY(0)'
+el1.addEventListener('mousedown', function() {
+  el1.style.transform = 'perspective(500px) scale(0.9) rotateX(0) rotateY(0)'
 })
 
-/* Add listener for mouseup, simulate release of mouse click */
-el.addEventListener('mouseup', function() {
-  el.style.transform = 'perspective(500px) scale(1.1) rotateX(0) rotateY(0)'
+/* Add listener for mouseup, simulate rel1ease of mouse click */
+el1.addEventListener('mouseup', function() {
+  el1.style.transform = 'perspective(500px) scale(1.1) rotateX(0) rotateY(0)'
+})
+
+
+el2.addEventListener('mouseout', function() {
+  el2.style.transform = 'perspective(500px) scale(1) rotateX(0) rotateY(0)'
+})
+
+/* Add listener for mousedown event, to simulate click */
+el2.addEventListener('mousedown', function() {
+  el2.style.transform = 'perspective(500px) scale(0.9) rotateX(0) rotateY(0)'
+})
+
+/* Add listener for mouseup, simulate rel1ease of mouse click */
+el2.addEventListener('mouseup', function() {
+  el2.style.transform = 'perspective(500px) scale(1.1) rotateX(0) rotateY(0)'
+})
+
+
+el3.addEventListener('mouseout', function() {
+  el3.style.transform = 'perspective(500px) scale(1) rotateX(0) rotateY(0)'
+})
+
+/* Add listener for mousedown event, to simulate click */
+el3.addEventListener('mousedown', function() {
+  el3.style.transform = 'perspective(500px) scale(0.9) rotateX(0) rotateY(0)'
+})
+
+/* Add listener for mouseup, simulate rel1ease of mouse click */
+el3.addEventListener('mouseup', function() {
+  el3.style.transform = 'perspective(500px) scale(1.1) rotateX(0) rotateY(0)'
+})
+
+el4.addEventListener('mouseout', function() {
+  el4.style.transform = 'perspective(500px) scale(1) rotateX(0) rotateY(0)'
+})
+
+/* Add listener for mousedown event, to simulate click */
+el4.addEventListener('mousedown', function() {
+  el4.style.transform = 'perspective(500px) scale(0.9) rotateX(0) rotateY(0)'
+})
+
+/* Add listener for mouseup, simulate rel1ease of mouse click */
+el4.addEventListener('mouseup', function() {
+  el4.style.transform = 'perspective(500px) scale(1.1) rotateX(0) rotateY(0)'
+})
+
+el5.addEventListener('mouseout', function() {
+  el5.style.transform = 'perspective(500px) scale(1) rotateX(0) rotateY(0)'
+})
+
+/* Add listener for mousedown event, to simulate click */
+el5.addEventListener('mousedown', function() {
+  el5.style.transform = 'perspective(500px) scale(0.9) rotateX(0) rotateY(0)'
+})
+
+/* Add listener for mouseup, simulate rel1ease of mouse click */
+el5.addEventListener('mouseup', function() {
+  el5.style.transform = 'perspective(500px) scale(1.1) rotateX(0) rotateY(0)'
+})
+
+el6.addEventListener('mouseout', function() {
+  el6.style.transform = 'perspective(500px) scale(1) rotateX(0) rotateY(0)'
+})
+
+/* Add listener for mousedown event, to simulate click */
+el6.addEventListener('mousedown', function() {
+  el6.style.transform = 'perspective(500px) scale(0.9) rotateX(0) rotateY(0)'
+})
+
+/* Add listener for mouseup, simulate rel1ease of mouse click */
+el6.addEventListener('mouseup', function() {
+  el6.style.transform = 'perspective(500px) scale(1.1) rotateX(0) rotateY(0)'
 })
     </script>
 </body>
