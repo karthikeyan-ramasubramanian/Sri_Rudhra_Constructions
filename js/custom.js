@@ -579,3 +579,4 @@ jQuery(window).on('resize',function () {
 	THM.resize();
 });
 /*  Window Resize END */
+
