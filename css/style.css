@@ -12688,6 +12688,7 @@ label.error {
   font-size: 14px;
   font-weight: 600;
   text-transform: uppercase;
+  
 }
 
 .btn.btn-lg,
@@ -21247,6 +21248,7 @@ footer .footer-bottom {
   padding: 20px 0;
   font-size: 14px;
   border-top: 1px solid rgba(255, 255, 255, 0.25);
+  white-space: nowrap;
 }
 footer .widget-link li {
   display: inline-block;
