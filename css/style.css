@@ -15154,7 +15154,14 @@ label.error {
   font-size: 30px;
   font-weight: 700;
 }
-.table-option:hover,
+.table-option .card-header:hover{
+  background-color: #eee;
+  border: 2px solid #eee;
+}
+.pricingtable-inner .card .card-header{
+  padding: 10px;
+}
+
 .table-option.active {
   background-color: #eeeeee;
   border: 2px solid #eeeeee;
@@ -16288,7 +16295,7 @@ label.error {
 }
 
 .service-row {
-  gap: 15px;
+  gap: 10px;
 }
 
 .service-row .col {
@@ -16337,6 +16344,7 @@ label.error {
   -webkit-transition: all 0.5s;
   -ms-transition: all 0.5s;
   transition: all 0.5s;
+  height: 100%;
 }
 
 .service-box .info {
