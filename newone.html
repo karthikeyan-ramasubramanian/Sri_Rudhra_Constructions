@@ -1,4 +1,4 @@
-
+<!-- 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -230,9 +230,8 @@ optionsList.forEach((option) => {
 });
   </script>
 </body>
-</html>
-
-<!-- <!DOCTYPE html>
+</html> -->
+ <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -243,7 +242,6 @@ optionsList.forEach((option) => {
           display: flex;
           justify-content: center;
           align-items: center;
-          align-contents: center;
           height: 100%;
           width: 100%;
         }
@@ -257,6 +255,7 @@ optionsList.forEach((option) => {
 
         #allImgs div {
           padding: 20px;
+          margin: 20px;
         }
 
         /* Styles for the tilt block */
@@ -287,8 +286,40 @@ optionsList.forEach((option) => {
     <div id="tilt5" style="background-image: url('./images/portfolio/portfolio-box1/pic5.jpeg');"></div>
     <div id="tilt6" style="background-image: url('./images/portfolio/portfolio-box1/pic6.jpeg');"></div>
   </div>
-    
     <script>
+      const n = 6;
+      var elm = [];
+      for (var i = 0; i < n; i++) {
+        elm[i] = document.getElementById(`tilt${i+1}`);
+        console.log(`tilt${i}`)
+      }
+  const height = elm[0].clientHeight
+  const width = elm[0].clientWidth
+  
+  for (i=0;i<n;i++) {
+    elm[i].addEventListener('mousemove', (e) => {
+      var xVal = e.layerX
+      var yVal = e.layerY
+      var yRotation = 20 * ((xVal - width / 2) / width)
+      var xRotation = -20 * ((yVal - height / 2) / height)
+      var string = 'perspective(500px) scale(1.1) rotateX(' + xRotation + 'deg) rotateY(' + yRotation + 'deg)'
+      elm[i].style.transform = 'perspective(500px) scale(1.1) rotateX(' + xRotation + 'deg) rotateY(' + yRotation + 'deg)';
+    })
+  
+    elm[i].addEventListener('mouseout', () => {
+      elm[i].style.transform = 'perspective(500px) scale(1) rotateX(0) rotateY(0)'
+    })
+    elm[i].addEventListener('mousedown', () => {
+      elm[i].style.transform = 'perspective(500px) scale(0.9) rotateX(0) rotateY(0)'
+    })
+    elm[i].addEventListener('mouseup', () => {
+      elm[i].style.transform = 'perspective(500px) scale(1.1) rotateX(0) rotateY(0)'
+    })
+  
+  }
+    </script>
+
+    <!-- <script>
         /* Store the element in el */
         let el1 = document.getElementById('tilt1')
         let el2 = document.getElementById('tilt2')
@@ -467,6 +498,6 @@ el6.addEventListener('mousedown', function() {
 el6.addEventListener('mouseup', function() {
   el6.style.transform = 'perspective(500px) scale(1.1) rotateX(0) rotateY(0)'
 })
-    </script>
+    </script> -->
 </body>
-</html> -->
+</html> 
