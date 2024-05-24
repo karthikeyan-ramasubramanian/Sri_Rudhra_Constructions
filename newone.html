@@ -287,35 +287,36 @@ optionsList.forEach((option) => {
     <div id="tilt6" style="background-image: url('./images/portfolio/portfolio-box1/pic6.jpeg');"></div>
   </div>
     <script>
-      const n = 6;
-      var elm = [];
-      for (var i = 0; i < n; i++) {
-        elm[i] = document.getElementById(`tilt${i+1}`);
-        console.log(`tilt${i}`)
+      var i = 0;
+      const elm = [];
+      try{
+        while(true) {
+          tiltEff(document.getElementById(`tilt${++i}`));
+        }
+      } catch(err) {
+        console.log(err);
       }
-  const height = elm[0].clientHeight
-  const width = elm[0].clientWidth
-  
-  for (i=0;i<n;i++) {
-    elm[i].addEventListener('mousemove', (e) => {
+  const height = document.getElementById('tilt0').clientHeight
+  const width = document.getElementById('tilt0').clientWidth
+
+  function tiltEff (elmt) {
+    elmt.addEventListener('mousemove', (e) => {
       var xVal = e.layerX
       var yVal = e.layerY
       var yRotation = 20 * ((xVal - width / 2) / width)
       var xRotation = -20 * ((yVal - height / 2) / height)
-      var string = 'perspective(500px) scale(1.1) rotateX(' + xRotation + 'deg) rotateY(' + yRotation + 'deg)'
-      elm[i].style.transform = 'perspective(500px) scale(1.1) rotateX(' + xRotation + 'deg) rotateY(' + yRotation + 'deg)';
+      var string = 'perspective(500px) scale(1.1) rotateX(' + xRotation + 'deg) rotateY(' + yRotation + 'deg)';
+      elmt.style.transform = 'perspective(500px) scale(1.1) rotateX(' + xRotation + 'deg) rotateY(' + yRotation + 'deg)';
     })
-  
-    elm[i].addEventListener('mouseout', () => {
-      elm[i].style.transform = 'perspective(500px) scale(1) rotateX(0) rotateY(0)'
+    elmt.addEventListener('mouseout', () => {
+      elmt.style.transform = 'perspective(500px) scale(1) rotateX(0) rotateY(0)'
     })
-    elm[i].addEventListener('mousedown', () => {
-      elm[i].style.transform = 'perspective(500px) scale(0.9) rotateX(0) rotateY(0)'
+    elmt.addEventListener('mousedown', () => {
+      elmt.style.transform = 'perspective(500px) scale(0.9) rotateX(0) rotateY(0)'
     })
-    elm[i].addEventListener('mouseup', () => {
-      elm[i].style.transform = 'perspective(500px) scale(1.1) rotateX(0) rotateY(0)'
+    elmt.addEventListener('mouseup', () => {
+      elmt.style.transform = 'perspective(500px) scale(1.1) rotateX(0) rotateY(0)'
     })
-  
   }
     </script>
 
