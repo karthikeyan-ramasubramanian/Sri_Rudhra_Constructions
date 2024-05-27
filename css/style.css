@@ -16967,7 +16967,7 @@ label.error {
   -o-transform: scale(1);
 }
 
-#tilt1, #tilt2, #tilt3, #tilt4, #tilt5, #tilt6 {
+#tilt1, #tilt2, #tilt3, #tilt4, #tilt5, #tilt6, #tilt7, #tilt8, #tilt9, #tilt10, #tilt11, #tilt12, #tilt13, #tilt14, #tilt15, #tilt16, #tilt17, #tilt18, #tilt19, #tilt20, #tilt21, #tilt22, #tilt23, #tilt24, #tilt25, #tilt26, #tilt27, #tilt28, #tilt29, #tilt30, #tilt31, #tilt32, #tilt33 {
   display: block;
   height: 200px;
   width: 300px;
@@ -16979,7 +16979,7 @@ label.error {
   background-repeat: no-repeat;
   border-radius: 13px;
 }
-#tilt1:hover, #tilt2:hover, #tilt3:hover, #tilt4:hover, #tilt5:hover, #tilt6:hover {
+#tilt1:hover, #tilt2:hover, #tilt3:hover, #tilt4:hover, #tilt5:hover, #tilt6:hover, #tilt7:hover, #tilt8:hover, #tilt9:hover, #tilt10:hover, #tilt11:hover, #tilt12:hover, #tilt13:hover, #tilt14:hover, #tilt15:hover, #tilt16:hover, #tilt17:hover, #tilt18:hover, #tilt19:hover, #tilt20:hover, #tilt21:hover, #tilt22:hover, #tilt23:hover, #tilt24:hover, #tilt25:hover, #tilt26:hover, #tilt27:hover, #tilt28:hover, #tilt29:hover, #tilt30:hover, #tilt31:hover, #tilt32:hover, #tilt33:hover {
   box-shadow: 0px 0px 30px rgba(0,0,0, 0.6);
   cursor: pointer;
   border-radius: 15px;
