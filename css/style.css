@@ -21282,7 +21282,7 @@ footer .footer-bottom {
   padding: 20px 0;
   font-size: 14px;
   border-top: 1px solid rgba(255, 255, 255, 0.25);
-  white-space: nowrap;
+  /* white-space: nowrap; */
 }
 footer .widget-link li {
   display: inline-block;
@@ -21359,3 +21359,19 @@ footer .widget ul li a:hover {
   background-color: #a6611c;
 }
 /*# sourceMappingURL=style.css.map */
+.footer-tp{
+  display: flex; 
+  align-items:center;
+  justify-content: space-around; 
+  flex-wrap: wrap;  
+}
+.footer{
+  background-color: #054023;
+  
+  
+}
+.footer2{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
