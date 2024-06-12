@@ -133,7 +133,7 @@
    text-decoration-skip-ink: none;
  }
  
- Address :- {
+ .Address  {
    margin-bottom: 1rem;
    font-style: normal;
    line-height: inherit;
@@ -223,7 +223,12 @@
    margin-top: 0;
    margin-bottom: 1rem;
    overflow: auto;
-   -ms-overflow-style: scrollbar;
+    .Address{
+   margin-bottom: 1rem;
+   font-style: normal;
+   line-height: inherit;
+ }
+ 
  }
  
  figure {
@@ -10545,7 +10550,8 @@
  img {
    border-style: none;
    height: auto;
-   max-width: 100%;
+  
+
    vertical-align: middle;
  }
  
@@ -16717,7 +16723,7 @@
  }
  @media only screen and (max-width: 575px) {
    .sidenav-list ul a span {
-     padding: 0 35px 0 15px;
+     padding: 0 20px 0 30px;
      height: 35px;
      line-height: 35px;
      font-size: 13px;
@@ -21359,7 +21365,7 @@
  .footer-tp{
    display: flex; 
    align-items:center;
-   margin-left: 150px;
+   margin-left: 50px;
    justify-content: space-around; 
    flex-wrap: wrap;  
  }
@@ -21373,3 +21379,13 @@
    align-items: center;
    justify-content: center;
  }
+ /* @media only screen and (max-width: 844px) {
+  .logo-header{
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;  }
+ } */
