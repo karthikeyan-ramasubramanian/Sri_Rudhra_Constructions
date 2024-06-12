@@ -597,7 +597,7 @@
  .container {
    width: 100%;
    padding-right: 15px;
-   padding-left: 15px;
+   padding-left: 5px;
    margin-right: auto;
    margin-left: auto;
  }
@@ -21379,13 +21379,10 @@
    align-items: center;
    justify-content: center;
  }
- /* @media only screen and (max-width: 844px) {
-  .logo-header{
-    display: flex;
-    align-items: baseline;
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 100%;
-    flex-direction: column;
-    align-items: center;  }
- } */
+ @media only screen and (max-width: 845px) {
+  .imgabt{
+    width: 100vw;
+    padding: 0;
+    margin: 0;
+  }
+ }
