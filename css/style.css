@@ -21111,7 +21111,7 @@
  /* Header Transparent */
  .header-transparent {
    position: absolute;
-   top: -33px;
+   top: -39vpx;
    left: 0;
    width: 100%;
  }
